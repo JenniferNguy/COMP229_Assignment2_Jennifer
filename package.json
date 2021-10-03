@@ -1,6 +1,6 @@
 {
-  "name": "nguyenhaphuong",
-  "version": "0.0.0",
+  "name": "comp229-assignment1",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
@@ -15,5 +15,18 @@
     "http-errors": "~1.6.3",
     "jquery": "^3.6.0",
     "morgan": "~1.9.1"
-  }
+  },
+  "description": "For Assignment 1 - Comp229",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JenniferNguy/COMP229Jennifer.git"
+  },
+  "author": "Nguyen Ha Phuong - Jennifer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JenniferNguy/COMP229Jennifer/issues"
+  },
+  "homepage": "https://github.com/JenniferNguy/COMP229Jennifer#readme"
 }
