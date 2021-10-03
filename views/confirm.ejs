@@ -1,0 +1,47 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container" style ="background-color: #e6f2ff;">
+    <br/>
+    <div class="jumbotron" style="text-align: center;">
+        <img src="/images/tick.png" class="img-fluid" alt="tick" width="90" height="100" >
+        <h1 style="text-align: center; color: green;">Thank you for reaching me</h1>
+        <h4>Your information:</h4>
+        <br/>
+        <p><b>First Name:</b> <span id="result-name" /></p>
+        <p><b>Last name:</b> <span id="result-surname" /></p>
+        <p><b>Email:</b> <span id="result-email" /></p>
+        <p><b>Phone:</b> <span id="result-phone" /></p>
+        <p><b>Message:</b><br/> <span id="result-message" /></p>
+      
+        <h4><a href="/">Go back to home page</a></h4>
+    </div>
+  </main>
+  
+  <script>
+
+//This script to get the input information of users then display on the page
+
+window.addEventListener('load', () => {
+
+const name = sessionStorage.getItem('NAME');
+const surname = sessionStorage.getItem('SURNAME');
+const email = sessionStorage.getItem('EMAIL');
+const phone = sessionStorage.getItem('PHONE');
+const message = sessionStorage.getItem('MESSAGE');
+
+
+document.getElementById('result-name').innerHTML = name;
+document.getElementById('result-surname').innerHTML = surname;
+document.getElementById('result-email').innerHTML = email;
+document.getElementById('result-phone').innerHTML = phone;
+document.getElementById('result-message').innerHTML = message;
+
+})
+  </script>
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
