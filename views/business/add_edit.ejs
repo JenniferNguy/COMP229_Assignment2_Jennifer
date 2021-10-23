@@ -1,0 +1,78 @@
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= item._id %>"
+                    >
+                    <label for="itemTextField">Contact Name</label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter the Contact Name"
+                        name="item" 
+                        value="<%= item.name %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="QtyTextField">Phone number</label>
+                    <input type="number" class="form-control"
+                    id="QtyTextField"
+                    placeholder="xxx-xxx-xxxx"
+                    name="qty" 
+                    value="<%= item.number %>"
+                    required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="statusTextField">Email</label>
+                    <input type="text" class="form-control"
+                    id="statusTextField"
+                    placeholder="Enter an email"
+                    name="status" 
+                    value="<%= item.email %>"
+                    >
+                </div>
+                <br />
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Update
+                </button>
+
+                 <!--
+                <button class="btn btn-danger" type="submit">
+                    <i class="fas fa-trash-alt"></i> 
+                    Delete
+                </button>
+                 -->
+
+               
+                 <a href="/business/delete/<%= item._id %>" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> 
+                    Delete
+                </button>
+               
+                
+                
+                <a href="/business/list"s class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>

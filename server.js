@@ -4,9 +4,10 @@
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./config/app');
 var debug = require('debug')('codepractice:server');
 var http = require('http');
+const configurePassport = require('./config/passport');
 
 /**
  * Get port from environment and store in Express.

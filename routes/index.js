@@ -1,39 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home'});
-});
+// use controller 
+let controlerIndex = require('../controller/index');
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home'});
-});
+router.get('/', controlerIndex.home);
 
-/* GET About Us page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About'});
-});
+/* GET About page avaulable on http://localhost:3000/about . */
+router.get('/about', controlerIndex.about);
 
-/* GET Products page. */
-router.get('/projects', function(req, res, next) {
-  res.render('project', { title: 'Projects'});
-});
+/* GET Projects page. */
+router.get('/projects', controlerIndex.projects);
 
-/* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('service', { title: 'Services'});
-});
+/* GET Service page. */
+router.get('/service', controlerIndex.service);
 
-/* GET Contact Us page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact'});
-});
+/* GET Contact page. */
+router.get('/contact', controlerIndex.contact);
 
-/* GET confirm page. */
-router.get('/confirm', function(req, res, next) {
-  res.render('confirm', { title: 'Confirm'});
-});
 
 module.exports = router;
