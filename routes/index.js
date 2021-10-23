@@ -19,5 +19,7 @@ router.get('/service', controlerIndex.service);
 /* GET Contact page. */
 router.get('/contact', controlerIndex.contact);
 
+/* GET Confirm page. */
+router.get('/confirm', controlerIndex.confirm);
 
 module.exports = router;

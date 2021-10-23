@@ -23,13 +23,20 @@ exports.projects = function(req, res, next) {
 
 exports.service = function(req, res, next) {
     res.render('service', { 
-        title: 'Service',
-        userName: req.user ? req.user.username : ''
-     });
+      title: 'Service',
+      userName: req.user ? req.user.username : '' 
+    });
 }
 
 exports.contact = function(req, res, next) {
     res.render('contact', { 
+      title: 'Contact',
+      userName: req.user ? req.user.username : '' 
+    });
+}
+
+exports.confirm = function(req, res, next) {
+    res.render('confirm', { 
       title: 'Contact',
       userName: req.user ? req.user.username : '' 
     });
