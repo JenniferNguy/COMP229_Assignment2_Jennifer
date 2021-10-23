@@ -31,7 +31,7 @@ module.exports.renderSignin = function(req, res, next) {
     });
   } else {
     console.log(req.user);
-    return res.redirect('/');
+    return res.redirect('/business/list');  // redirect to /business/list
   }
 };
 
@@ -89,7 +89,7 @@ module.exports.signout = function(req, res, next) {
 
 module.exports.signin = function(req, res, next){
   passport.authenticate('local', {   
-    successRedirect: req.session.url || '/',
+    successRedirect: req.session.url || '/business/list',  // redirect to /business/list
     failureRedirect: '/users/signin',
     failureFlash: true
   })(req, res, next);

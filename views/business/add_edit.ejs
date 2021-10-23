@@ -17,7 +17,7 @@
                     <input type="text" class="form-control"
                         id="itemTextField"
                         placeholder="Enter the Contact Name"
-                        name="item" 
+                        name="name" 
                         value="<%= item.name %>"
                         required>
                 </div>
@@ -27,7 +27,7 @@
                     <input type="number" class="form-control"
                     id="QtyTextField"
                     placeholder="xxx-xxx-xxxx"
-                    name="qty" 
+                    name="number" 
                     value="<%= item.number %>"
                     required>
                 </div>
@@ -37,7 +37,7 @@
                     <input type="text" class="form-control"
                     id="statusTextField"
                     placeholder="Enter an email"
-                    name="status" 
+                    name="email" 
                     value="<%= item.email %>"
                     >
                 </div>
@@ -55,13 +55,10 @@
                 </button>
                  -->
 
-               
                  <a href="/business/delete/<%= item._id %>" class="btn btn-danger">
                     <i class="fas fa-trash-alt"></i> 
                     Delete
-                </button>
-               
-                
+                 </a>
                 
                 <a href="/business/list"s class="btn btn-warning">
                     <i class="fas fa-undo"></i> 
@@ -76,3 +73,4 @@
 </div>
 
 <%- include ../partials/footer.ejs %>
+<%- include ../partials/bottom_nav.ejs %>  

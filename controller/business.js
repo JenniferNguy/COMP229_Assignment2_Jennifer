@@ -45,7 +45,7 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedItem = Business({
         _id: req.body.id,
         name: req.body.name,
-        number: req.body.qty,
+        number: req.body.number,
         email: req.body.email,
     });
 
@@ -97,9 +97,8 @@ module.exports.displayAddPage = (req, res, next) => {
 module.exports.processAddPage = (req, res, next) => {
     let newItem = Business({
         _id: req.body.id,
-        _id: req.body.id,
         name: req.body.name,
-        number: req.body.qty,
+        number: req.body.number,
         email: req.body.email,
     });
 
