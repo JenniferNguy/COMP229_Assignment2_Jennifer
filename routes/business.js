@@ -20,7 +20,7 @@ function requireAuth(req, res, next)
 }
 
 /* GET list of items */
-router.get('/list', businessController.businessList);
+router.get('/list', requireAuth, businessController.businessList);
 
 // Routers for edit
 router.get('/edit/:id', requireAuth, businessController.displayEditPage);

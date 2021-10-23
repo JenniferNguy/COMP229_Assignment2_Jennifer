@@ -41,3 +41,4 @@ exports.confirm = function(req, res, next) {
       userName: req.user ? req.user.username : '' 
     });
 }
+
