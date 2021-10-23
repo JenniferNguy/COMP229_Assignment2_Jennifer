@@ -22,6 +22,8 @@ function requireAuth(req, res, next)
 /* GET list of items */
 router.get('/list', requireAuth, businessController.businessList);
 
+
+
 // Routers for edit
 router.get('/edit/:id', requireAuth, businessController.displayEditPage);
 router.post('/edit/:id', requireAuth, businessController.processEditPage);
