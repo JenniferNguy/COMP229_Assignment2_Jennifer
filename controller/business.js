@@ -1,8 +1,10 @@
+//Name: Nguyen Ha Phuong - 301147401
+//Date: 23-Oct-2021
+
 // create a reference to the model
 let Business = require('../models/business');
 
 module.exports.businessList = function(req, res, next) {  
-    //Business.find((err, businessList) => {
 
     Business.find({}).sort({"name" : 1}).exec((err, businessList) => {
        
@@ -53,7 +55,6 @@ module.exports.processEditPage = (req, res, next) => {
         email: req.body.email,
     });
 
-    // console.log(updatedItem);
 
     Business.updateOne({_id: id}, updatedItem, (err) => {
         if(err)
@@ -63,8 +64,7 @@ module.exports.processEditPage = (req, res, next) => {
         }
         else
         {
-            // console.log(req.body);
-            // refresh the book list
+            // refresh the contact list
             res.redirect('/business/list');
         }
     });
@@ -82,7 +82,7 @@ module.exports.performDelete = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the contact list
             res.redirect('/business/list');
         }
     });
@@ -115,7 +115,7 @@ module.exports.processAddPage = (req, res, next) => {
         }
         else
         {
-            // refresh the book list
+            // refresh the contact list
             console.log(item);
             res.redirect('/business/list');
         }

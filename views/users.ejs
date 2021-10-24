@@ -1,3 +1,6 @@
+<!--Name: Nguyen Ha Phuong - 301147401
+    Date: 23-Oct-2021 -->
+
 <%- include partials/header.ejs %>
 
 <%- include partials/main_nav.ejs %>
@@ -25,13 +28,7 @@
   
   <div class="card">
     <img src="/images/profile.png" alt="Profile Picture" style="width:100%">
-   
-      <% if (typeof userName == 'string' && userName) { %>
-        <h1><%= userName %></h1>
-      <% } else { %>
-        <h1>Hi there!</h1>
-      <% } %>   
-      
+    <h1><%= userName %></h1>
   </div>
   <br/><br/><br/><br/><br/>
   </main>
