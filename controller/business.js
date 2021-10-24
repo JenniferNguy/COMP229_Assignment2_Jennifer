@@ -2,8 +2,10 @@
 let Business = require('../models/business');
 
 module.exports.businessList = function(req, res, next) {  
-    Business.find((err, businessList) => {
-        // console.log(businessContactList);
+    //Business.find((err, businessList) => {
+
+    Business.find({}).sort({"name" : 1}).exec((err, businessList) => {
+       
         if(err)
         {
             return console.error(err);
@@ -12,7 +14,7 @@ module.exports.businessList = function(req, res, next) {
         {
             res.render('business/list', {
                 title: 'Business Contacts', 
-                userName: req.user ? req.user.username : '',         //display username
+                userName: req.user ? req.user.username : '', //display username
                 BusinessList: businessList
             })            
         }
